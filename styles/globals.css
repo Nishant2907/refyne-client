@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Name: Electric Lime color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: linear-gradient(to top left, #2bc0e4, #eaecc6);
+
+    --background: 204 50.050000000000004% 4.24%;
+    --foreground: 204 7.7% 97.65%;
+
+    --card: 204 49.6% 6.890000000000001%;
+    --card-foreground: 204 49.6% 6.890000000000001%;
+
+    --muted: 204 38.5% 15.9%;
+    --muted-foreground: 204 7.7% 55.3%;
+
+    --popover: 204 49.6% 6.890000000000001%;
+    --popover-foreground: 204 7.7% 97.65%;
+
+    --border: 204 38.5% 15.9%;
+    --input: 204 38.5% 15.9%;
+
+    --primary: 204 77% 53%;
+    --primary-foreground: 204 7.7% 5.300000000000001%;
+
+    --secondary: 204 38.5% 15.9%;
+    --secondary-foreground: 204 7.7% 97.65%;
+
+    --accent: 204 38.5% 15.9%;
+    --accent-foreground: 204 7.7% 97.65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 204 7.7% 97.65%;
+
+    --border: 208.3 30.3% 11.6%;
+    --input: 208.3 30.3% 11.6%;
+    --ring: 204 77% 53%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  .offset_ring {
+    @apply ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.text_gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
